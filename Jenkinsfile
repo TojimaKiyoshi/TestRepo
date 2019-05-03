@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''chmod +x gradlew
+        sh '''echo $ANDROID_HOME
+chmod +x gradlew
 ./gradlew assembleDebug
 '''
       }
