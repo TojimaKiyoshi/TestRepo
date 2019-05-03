@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''gradlew assembleDebug
+        sh '''export ANDROID_HOME=/usr/local/android-sdk/
+chmod +x gradlew
+./gradlew assembleDebug
 '''
       }
     }
